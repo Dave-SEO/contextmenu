@@ -55,10 +55,9 @@
     <ul id="aa"></ul>
 <script>
     window.onload=function(){
-        $('#aa').append("<li>1</li> " + "<li>2</li> " + "<li>3</li> ")
+        $('#aa').append("<li>1</li>" + "<li>2</li>" + "<li>3</li>")
         var menu=document.getElementById("menu");
-
-        $('#aa li').contextmenu(function(ev){
+        $('#aa').on('contextmenu','li', function(ev){
             $('#menu li').attr('data-id', $(this).text())
             var ev=ev||event;
             var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
